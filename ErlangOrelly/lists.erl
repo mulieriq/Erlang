@@ -1,6 +1,10 @@
 -module(lists).
 -export([product/1]).
+product ([])->0;
+product(List)->product(List,1).
 
-product (Text)->io:fwrite(Text),
+product([],Product)->Product;
+product
+    
 
-A = [1,1,2,1,3].
+

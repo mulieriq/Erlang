@@ -12,4 +12,4 @@
 %% API
 -export([hello/0]).
 
-hello()->io:fwrite/1("HI dear").
+hello()->io:fwrite("HI dear").
