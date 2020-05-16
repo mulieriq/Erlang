@@ -19,7 +19,8 @@ fall_v2(Planet, Distance) when Distance >= 0 ->
             
 %Here we added the gaurd (WHEN) within the case statement
 fall_v3(Planet, Distance) ->
- Gravity =  case Planet of 
+ Gravity =  
+    case Planet of 
         earth  when Distance >= 0 -> 40;
         mars  when Distance >= 20 ->400
      end,
