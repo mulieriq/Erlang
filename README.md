@@ -2,7 +2,7 @@
 
 Quick Start On Erlang
 
-> Trying Something Is not bad.
+> Trying Something New Is not bad.
 
 ### Sample Erlang Code
 ```erlang
