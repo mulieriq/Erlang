@@ -13,6 +13,8 @@ product([] , Product)->Product; % when list empty, stop, report
 
 product([Head|Tail],Product)->product(Tail , (Product*Head)). 
 
+%the same code can be used to perfom addition and other functions in the lit
+
 %%Small Documentation
 %%WHat this function does is that it multiplies the number in the given list by the product of the previous number i.e
 %[1,2,3,4,5,6,7]

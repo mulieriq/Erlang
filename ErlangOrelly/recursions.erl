@@ -1,5 +1,5 @@
 -module(recursions).
--export([fall_v/2 , fall_v2/2, fall_v3/2, fall_v4/1,fall_v5/1 ,countup/1]).
+-export([fall_v/2 , fall_v2/2, fall_v3/2, fall_v4/1,fall_v5/1 ,fall_v6/1,countup/1]).
 %-import(person , [get_username /1]).
 
 %guard inside the function
@@ -25,6 +25,14 @@ fall_v3(Planet, Distance) ->
         mars  when Distance >= 20 ->400
      end,
      math:sqrt(Gravity * 2 * Distance).
+fall_v6(Where)->
+    {Planet , Distance} = Where,
+    Gravity = 
+ case Planet of
+earth when Distance>= 0 -> 40;
+mars when Distance >= 0 -> 400
+end,
+math:sqrt(Gravity *2 * Distance).
 
 
 %in this phase we are going too add if statement to filter in bound elements
