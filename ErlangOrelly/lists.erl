@@ -121,3 +121,55 @@
 % 19> [H6|T6]=T5.
 % ** exception error: no match of right hand side value []
 % 20> 
+
+
+%%List zip und unzip
+%zip generates alst of tuples from binding 2 lists of the same length while uzip it reverses
+
+% 1> List1 = [1,2,3,4].
+% [1,2,3,4]
+% 2> List2 = [a,b,c,d].
+% [a,b,c,d]
+% 3> TupleList = list:zip(List1,List2).
+% ** exception error: undefined function list:zip/2
+% 4> TupleList = lists:zip(List1,List2).
+% [{1,a},{2,b},{3,c},{4,d}]
+% 5> Unzip = lists:unzip(TupleList).
+% {[1,2,3,4],[a,b,c,d]}
+% 6> Initial = [{1,a},{2,s}].
+% [{1,a},{2,s}]
+
+
+%% keystore acts as a key value per that goes into a list /adds a element with prescrible config
+
+
+
+% 7> Second = lists:keystore(3,1,Initial,{3,c}).
+% [{1,a},{2,s},{3,c}]
+% 8> Third = lists:keystore(3,1,Initial,{3,d}). 
+% [{1,a},{2,s},{3,d}]
+% 9> Forth = lists:keystore(3,1,{3,d}).        
+% ** exception error: undefined function lists:keystore/3
+% 10> Forth = lists:keystore(3,{3,d}).  
+% ** exception error: undefined function lists:keystore/2
+% 11> Forth = lists:keystore({3,d}).  
+% ** exception error: undefined function lists:keystore/1
+
+%%key replace just replaces
+
+
+% 12> Fifth = lists:keyreplace(3,1,Initial,{3,f}).
+% [{1,a},{2,s}]
+% 13> Third = lists:keystore(3,1,Initial,{3,d}).  
+% [{1,a},{2,s},{3,d}]
+% 14> Fifth = lists:keyreplace(3,1,Initial,{3,f}).
+% [{1,a},{2,s}]
+% 15> Fifth = lists:keyreplace(3,1,Initial,{3}).  
+
+%key find finds a value / list /tuple
+
+% 1> Animal  = [{1,lion},{2,dog}].
+% [{1,lion},{2,dog}]
+% 2> FInd = lists:keyfind(2,1,Animal).
+% {2,dog}
+% 3> 
