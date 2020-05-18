@@ -25,14 +25,15 @@ fall_v3(Planet, Distance) ->
         mars  when Distance >= 20 ->400
      end,
      math:sqrt(Gravity * 2 * Distance).
+
 fall_v6(Where)->
-    {Planet , Distance} = Where,
-    Gravity = 
- case Planet of
-earth when Distance>= 0 -> 40;
-mars when Distance >= 0 -> 400
-end,
-math:sqrt(Gravity *2 * Distance).
+        {Planet , Distance} = Where,
+        Gravity = 
+         case Planet of
+             earth when Distance>= 0 -> 40;
+             mars when Distance >= 0 -> 400
+         end,
+        math:sqrt(Gravity *2 * Distance).
 
 
 %in this phase we are going too add if statement to filter in bound elements

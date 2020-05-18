@@ -4,14 +4,14 @@
 %public entry point
 
 product([])->0;  %in case the list is empty return 0
-product(List)->product(List,1).  %%calling the private product functions
+product(List)->product(List,1).  %replaced 0  with one %1  %%calling the private product functions
 
 
 product([] , Product)->Product; % when list empty, stop, report
 
 %%if list is not  empty
 
-product([Head|Tail],Product)->product(Tail , (Product*Head)). 
+product([Head|Tail],Product)->product(Tail , (Product+Head)).%%modified to do some adding %%product(Tail , (Product*Head)). 
 
 %the same code can be used to perfom addition and other functions in the lit
 
