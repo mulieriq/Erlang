@@ -3,6 +3,9 @@
  product ([])->0.
 
 
+%%Lists
+%%________________________________________
+
 
 % 7> [1,X,2,3,Y]= [1,2,3,4,6].
 % ** exception error: no match of right hand side value [1,2,3,4,6]
@@ -58,6 +61,7 @@
 
 
 %%%%Lists SEquencial (generating a sequence of number)
+%____________________________________________________________
 
 % Eshell V10.7  (abort with ^G)
 % 1> lits:seq(-2,8).
@@ -75,4 +79,45 @@
 %        (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
 
 
+% Splitting Lists into Heads and Tails
+%________________________________________________________________________________
 
+% 1> List = [1,2,3,4,5].
+% [1,2,3,4,5]
+% 2> [H1|T1]=List.
+% [1,2,3,4,5]
+% 3> H1.
+% 1
+% 4> T1.
+% [2,3,4,5]
+% 5> [H2|T2] = T1.
+% [2,3,4,5]
+% 6> H2.
+% 2
+% 7> T2.
+% [3,4,5]
+% 8> T1.
+% [2,3,4,5]
+% 9> [H3|T3]= T2.
+% [3,4,5]
+% 10> H3.
+% 3
+% 11> t3.
+% t3
+% 12> T3.
+% [4,5]
+% 13> [H4|T4] = T3.
+% [4,5]
+% 14> H4.
+% 4
+% 15> T4.
+% [5]
+% 16> [H5|T5] = T4.
+% [5]
+% 17> H5.
+% 5
+% 18> T5.
+% []
+% 19> [H6|T6]=T5.
+% ** exception error: no match of right hand side value []
+% 20> 
