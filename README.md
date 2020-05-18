@@ -11,32 +11,25 @@ Quick Start On Erlang
 
 ### Sample Erlang Code
 ```erlang
- -module(echo).
- -export([start/1,server/1,handle_messages/1]).
+ -module(lists1).
+ -export([product/1]).
 
- start(Port) ->
-     spawn(?MODULE,server,[Port]).
+ %public entry point
 
- server(Port) ->
-     {ok, Socket} = gen_tcp:listen(Port,[{packet,line}]),
-     listen(Socket).
+ product([])->0;  %in case the list is empty return 0
+ product(List)->product(List,1).  %%calling the private product functions
 
- listen(Socket) ->
-     {ok, Active_socket} = gen_tcp:accept(Socket),
-     Handler = spawn(?MODULE,handle_messages,[Active_socket]),
-     ok = gen_tcp:controlling_process(Active_socket, Handler),
-     listen(Socket).
+ product([] , Product)->Product; % when list empty, stop, report
 
- handle_messages(Socket) ->
-     receive
-         {tcp,error,closed} ->
-             done;
-         {tcp,Socket,Data} ->
-             gen_tcp:send(Socket,Data),
-             echo:handle_messages(Socket);
-         _Other ->
-             unexpected
-     end.
+ %%if list is not  empty
+
+ product([Head|Tail],Product)->product(Tail , (Product*Head)). 
+
+ %%Small Documentation
+ %%WHat this function does is that it multiplies the number in the given list by the product of the previous number i.e
+ %[1,2,3,4,5,6,7]
+ %1*1 = 1
+ %1*2 = 2, 2 * 3 = 6 , 6*4 -= 24 , 24 *5 = 120 , 120 * 6 = 720, 720 * 7 = 5040
  ```    
 
 ---
