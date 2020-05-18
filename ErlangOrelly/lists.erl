@@ -55,3 +55,24 @@
 % ** exception error: no match of right hand side value [1,2,3,4,5,6,1,2,3,4,5,6]
 % 26> Comb2 = lists:append([A,B,lists:flatten(ListofLists)]).
 % [1,2,3,4,5,6,1,2,3,4,5,6]
+
+
+%%%%Lists SEquencial (generating a sequence of number)
+
+% Eshell V10.7  (abort with ^G)
+% 1> lits:seq(-2,8).
+% ** exception error: undefined function lits:seq/2
+% 2> lists:seq(-2,8).
+% [-2,-1,0,1,2,3,4,5,6,7,8]
+% 3> lists:seq($A,$Z).
+% "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+% 4> lists:seq($A,$9).
+% ** exception error: no function clause matching lists:seq(65,57) (lists.erl, line 243)
+% 5> lists:seq($A,$z). 
+% "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz"
+% 6> 
+% BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+%        (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+
+
+
