@@ -9,11 +9,3 @@ add([])->0;  %this is un used coz there isnt a time the list will be empty
 add(List)->add(List , 0).
 add([Head|Tail] , Increment)->add( Tail , Head+Increment);
 add([],Product)->Product.
-
-
-
-
-
-   
-
-
