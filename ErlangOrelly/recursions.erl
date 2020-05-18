@@ -53,7 +53,6 @@ if
     Velocity  >= 210 -> string:concat(User, "See You In Heaven")
 
 end.
-
 %here we capture thre result of the if statement
 
 fall_v5(Where) ->
