@@ -2,7 +2,12 @@
 
 Quick Start On Erlang
 
-> Trying Something Is not bad.
+> ## Trying Something Is not bad.
+
+>Topics Skipped
+- Erlang Chars Page 60
+- Erlang ask.line 63
+- Erlang io.read
 
 ### Sample Erlang Code
 ```erlang
