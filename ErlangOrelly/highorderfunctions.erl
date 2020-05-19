@@ -137,3 +137,8 @@ hof(Value,Function)-> 3 * Function(Value).
 % [4,8,4,2,1]
 % 20> lists:takewhile(Test, [1,2,4,8,4,2,1]).
 % [1,2]
+
+%FOlding Lists
+%_________________________________________
+
+%Stoped AT this point
