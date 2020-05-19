@@ -106,3 +106,26 @@ hof(Value,Function)-> 3 * Function(Value).
 % 8> [Value || Value <-List , Value<6 , Value >=0]. 
 % [1,2,3,4,5]
 % 9> 
+
+
+%%%Testing lists
+%_________________________________________________________________________
+
+
+% 11> IsInt = fun(Value) -> is_integer(Value) end.
+% #Fun<erl_eval.6.111823515>
+% 12> lists:all(IsInt, List).
+% true
+% 13> lists:any(IsInt, List).
+% true
+% 14> Compare = fun(Value) -> Value > 10 end.
+% #Fun<erl_eval.6.111823515>
+% 15> lists:any(Compare, List).
+% true
+% 16> lists:all(Compare, List).
+% false
+
+%SPliting lists 
+
+%__________________________________________
+
