@@ -1,4 +1,4 @@
-# Learnin Erlang For Backend Development
+# Learning Erlang For Backend Development
 
 Quick Start On Erlang
 
