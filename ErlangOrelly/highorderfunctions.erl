@@ -129,3 +129,11 @@ hof(Value,Function)-> 3 * Function(Value).
 
 %__________________________________________
 
+% 17> lists:partition(Compare,List).
+% {[16,32],[1,2,4,8]}
+% 18> Test=fun(Value) -> Value < 4 end.
+% #Fun<erl_eval.6.111823515>
+% 19> lists:dropwhile(Test, [1,2,4,8,4,2,1]).
+% [4,8,4,2,1]
+% 20> lists:takewhile(Test, [1,2,4,8,4,2,1]).
+% [1,2]
